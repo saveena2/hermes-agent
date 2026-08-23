@@ -1,0 +1,112 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:linear-gradient(135deg,#ffd6e8,#fff4c2,#d9f8ff);
+    overflow:hidden;
+}
+
+.card{
+    width:380px;
+    background:#fff;
+    border-radius:25px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,0.2);
+    animation:popup 1s ease;
+}
+
+@keyframes popup{
+    from{
+        transform:scale(0.5);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.flower{
+    font-size:60px;
+    animation:float 2s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+h1{
+    color:#ff4f87;
+    margin:15px 0;
+    font-size:32px;
+}
+
+.name{
+    font-size:28px;
+    color:#8e44ad;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.letter{
+    background:#fff8dc;
+    border-radius:15px;
+    padding:18px;
+    color:#444;
+    line-height:1.8;
+    font-size:16px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+button{
+    margin-top:20px;
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    background:#ff4f87;
+    color:#fff;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#e91e63;
+    transform:scale(1.08);
+}
+
+body::before,
+body::after{
+    content:"🌸 🌺 🌼 💖";
+    position:absolute;
+    font-size:30px;
+    animation:fall 10s linear infinite;
+}
+
+body::after{
+    left:70%;
+    animation-delay:5s;
+}
+
+@keyframes fall{
+    0%{
+        transform:translateY(-100px);
+    }
+    100%{
+        transform:translateY(110vh);
+    }
+}
